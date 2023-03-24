@@ -15,6 +15,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="upheader">
@@ -345,6 +351,85 @@
               </div>
             </div>
           </div>
+          <div class="main_products_trending">
+            <div class="main_products_trending_title">
+              <h2 class="main_products_trending_title_h2">
+                Trending This Week
+              </h2>
+              <div class="main_products_trending_title_categories">
+                <a
+                  href="#"
+                  class="main_products_trending_title_categories_category"
+                  >Men</a
+                ><a
+                  href="#"
+                  class="main_products_trending_title_categories_category"
+                  >Women</a
+                ><a
+                  href="#"
+                  class="main_products_trending_title_categories_category"
+                  >Baby</a
+                ><a
+                  href="#"
+                  class="main_products_trending_title_categories_category"
+                  >Fashion</a
+                >
+              </div>
+            </div>
+            <div class="main_products_trending_boxes splide">
+              <div class="main_products_trending_boxes_wrapper splide__track">
+                <ul
+                  class="main_products_trending_boxes_wrapper_list splide__list"
+                >
+                  <li class="splide__slide">
+                    <div class="main_products_trending_boxes_box">
+                      <div class="main_products_trending_boxes_box_image">
+                        <img
+                          src="./assets/images/indexPage/trending1.jpg"
+                          alt=""
+                          class="main_products_trending_boxes_box_image_img"
+                        />
+                        <div
+                          class="main_products_trending_boxes_box_image_btns"
+                        >
+                          <a
+                            href="#"
+                            class="main_products_trending_boxes_box_image_btns_btn"
+                          >
+                            <i class="fa-solid fa-cart-shopping"></i></a
+                          ><a
+                            href="#"
+                            class="main_products_trending_boxes_box_image_btns_btn"
+                            ><i class="fa-solid fa-heart"></i></a
+                          ><a
+                            href="#"
+                            class="main_products_trending_boxes_box_image_btns_btn"
+                            ><i class="fa-solid fa-magnifying-glass-plus"></i
+                          ></a>
+                        </div>
+                      </div>
+                      <div class="main_products_trending_boxes_box_desc">
+                        <a
+                          href="#"
+                          class="main_products_trending_boxes_box_desc_title"
+                          >Cashmere Tank + Bag</a
+                        >
+                        <span
+                          class="main_products_trending_boxes_box_desc_price"
+                        >
+                          $98.00
+                          <span
+                            class="main_products_trending_boxes_box_desc_price_old"
+                            >$120.00</span
+                          >
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -356,5 +441,17 @@
       src="https://kit.fontawesome.com/34d731233c.js"
       crossorigin="anonymous"
     ></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+"></script>
+    <script>
+      var splide = new Splide(".splide", {
+        type: "loop",
+        perPage: 4,
+        perMove: 1,
+      });
+
+      splide.mount();
+    </script>
   </body>
 </html>

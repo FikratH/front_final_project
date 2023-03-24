@@ -476,6 +476,122 @@ body {
   text-transform: capitalize;
   margin-bottom: 20px;
 }
+.main_products_trending {
+  padding: 95px 0;
+}
+.main_products_trending_title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #edeff2;
+}
+.main_products_trending_title_h2 {
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.main_products_trending_title_categories {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.main_products_trending_title_categories_category {
+  padding: 0px 12px 36px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #292621;
+  border-bottom: 4px solid transparent;
+  transition: all 0.4s ease;
+}
+.main_products_trending_title_categories_category:hover {
+  color: #ff2020;
+  border-bottom: 4px solid #ff2020;
+}
+.main_products_trending_title_categories_category.active {
+  color: #ff2020;
+  border-bottom: 4px solid #ff2020;
+}
+.main_products_trending_boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_products_trending_boxes_wrapper {
+  width: 90%;
+}
+.main_products_trending_boxes_box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.main_products_trending_boxes_box:hover .main_products_trending_boxes_box_image_btns {
+  opacity: 1;
+}
+.main_products_trending_boxes_box:hover .main_products_trending_boxes_box_image_img {
+  transform: scale(1.04);
+}
+.main_products_trending_boxes_box_image {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_products_trending_boxes_box_image_btns {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.main_products_trending_boxes_box_image_btns_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  color: #292621;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.main_products_trending_boxes_box_image_btns_btn:hover {
+  background: #ff2020;
+}
+.main_products_trending_boxes_box_image_img {
+  width: 95%;
+  height: 95%;
+  object-fit: cover;
+  transition: 0.3s ease;
+}
+.main_products_trending_boxes_box_desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.main_products_trending_boxes_box_desc_title {
+  text-decoration: none;
+  color: #292621;
+}
+.main_products_trending_boxes_box_desc_price {
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #74706b;
+}
+.main_products_trending_boxes_box_desc_price_old {
+  text-decoration: line-through;
+  color: #cebd9c;
+  margin-left: 12px;
+}
 
 @media (min-width: 1400px) {
   .container {
