@@ -189,6 +189,21 @@ body {
   list-style: none;
   gap: 26px;
 }
+.header_buttons_item.header_cart {
+  position: relative;
+}
+.header_buttons_item.header_cart .header_cart_number {
+  transition: all 0.4s ease-out 0s;
+  position: absolute;
+  background: #ff2020;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 12px;
+  top: -13px;
+  right: -11px;
+  padding: 1px 7px;
+}
 .header_buttons_item_link {
   text-decoration: none;
 }
@@ -591,6 +606,14 @@ body {
   text-decoration: line-through;
   color: #cebd9c;
   margin-left: 12px;
+}
+
+.hide {
+  display: none;
+}
+
+.splide__pagination {
+  display: none !important;
 }
 
 @media (min-width: 1400px) {
