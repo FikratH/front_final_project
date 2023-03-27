@@ -1526,9 +1526,23 @@ li {
     align-items: start;
     gap: 28px;
   }
+  .signup {
+    padding: 40px 20px 20px 26px;
+    min-width: 95%;
+  }
+  .signup_footer {
+    flex-direction: column;
+    align-items: start;
+    gap: 28px;
+  }
 }
 @media (max-width: 578px) {
   .login_inputs_check {
+    flex-direction: column;
+    gap: 13px;
+    align-items: start;
+  }
+  .signup_inputs_check {
     flex-direction: column;
     gap: 13px;
     align-items: start;

@@ -295,10 +295,28 @@ li {
       gap: 28px;
     }
   }
+  .signup {
+    padding: 40px 20px 20px 26px;
+    min-width: 95%;
+    &_footer {
+      flex-direction: column;
+      align-items: start;
+      gap: 28px;
+    }
+  }
 }
 
 @media (max-width: 578px) {
   .login {
+    &_inputs {
+      &_check {
+        flex-direction: column;
+        gap: 13px;
+        align-items: start;
+      }
+    }
+  }
+  .signup {
     &_inputs {
       &_check {
         flex-direction: column;
