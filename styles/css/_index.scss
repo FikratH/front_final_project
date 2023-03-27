@@ -1268,7 +1268,11 @@ li {
     max-width: 360px;
   }
   .upheader {
-    display: none;
+    &_right {
+      &_social {
+        display: none;
+      }
+    }
   }
   .header_buttons {
     display: none;
