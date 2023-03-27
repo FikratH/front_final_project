@@ -281,6 +281,16 @@ let dataArr = [
   },
 ];
 
+let users = [
+  {
+    id: 1,
+    username: "admin",
+    email: "admin@gmail.com",
+    password: "admin",
+    cart: [],
+  },
+];
+let currentUser = "";
 let cart = [];
 let currentCategory;
 const filterBtns = document.querySelectorAll(
@@ -291,12 +301,27 @@ const slider_wrapper = document.querySelector(
 );
 const cart_btn_header = document.querySelector(".header_cart_number");
 const sliderItems = document.querySelector(".main_items_boxes_wrapper_list");
+const btnToTop = document.querySelector(".button_top");
+const usernameField = document.querySelector(".username");
 
 document.addEventListener("DOMContentLoaded", function () {
+  if (localStorage.getItem("users")) {
+    users = JSON.parse(localStorage.getItem("users"));
+  }
+  if (localStorage.getItem("currentUser")) {
+    currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  }
+  console.log(currentUser);
+  usernameField.innerHTML =
+    currentUser.username == null
+      ? "No Active User"
+      : `Hi, ${currentUser.username}!`;
+  console.log("Current user => " + currentUser.username);
+  console.log("All users ", users);
+  localStorage.setItem("users", JSON.stringify(users));
   slider_wrapper.innerHTML = "";
   sliderItems.innerHTML = "";
   dataArr.forEach((item) => {
-    console.log(dataArr.indexOf(item));
     slider_wrapper.innerHTML += `
     <li class="splide__slide" data-category="${item.category.toLowerCase()}" data-id="${dataArr.indexOf(
       item
@@ -559,5 +584,20 @@ sliderItems.addEventListener("click", (e) => {
       console.log(cart);
       cart_btn_header.innerHTML = cart.length;
     }
+  }
+});
+
+btnToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    btnToTop.classList.add("active");
+  } else {
+    btnToTop.classList.remove("active");
   }
 });

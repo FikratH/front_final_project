@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;1,700&display=swap");
+
+$color-upheader-black: #292621;
+$color-upheader-border: #edeff2;
+$color-header: #141547;
+$color-white: #fff;
+$color-red: #ff2020;
+$color-crossed-price: #c7bd9c;
+$color-background-gray: #f6f6f6;
+$color-background-beige: #f3ead8;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+  background-color: #fff;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+li {
+  list-style: none;
+}
+
+.login {
+  background: #fff;
+  padding: 55px 60px 50px 50px;
+  box-shadow: 0px 10px 30px 0px rgba(13, 12, 13, 0.2);
+  min-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: $color-white;
+    padding: 15px;
+  }
+
+  &_heading {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    &_title {
+      color: #140c40;
+      font-size: 30px;
+      font-weight: 600;
+    }
+    &_subtitle {
+      line-height: 1.5;
+    }
+  }
+  &_inputs {
+    padding-top: 35px;
+    padding-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 25px;
+    width: 100%;
+    &_input {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      width: 100%;
+      &_label {
+        font-size: 17px;
+        color: #140c40;
+        text-transform: capitalize;
+        font-weight: 500;
+        text-align: left;
+      }
+      &_input {
+        border: 1px solid #c9c9c9;
+        width: 100%;
+        height: 50px;
+        padding: 0 25px;
+        color: #000;
+        outline: none;
+        &::placeholder {
+          color: #c9c9c9;
+          font-family: "Jost", sans-serif;
+          font-size: 14px;
+        }
+      }
+    }
+    &_check {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      &_check {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        &_checkbox {
+          width: 20px;
+          height: 20px;
+          border: 1px solid #9e97ac !important;
+          outline: none;
+          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        &_label {
+          font-size: 17px;
+          color: #140c40;
+          font-weight: 500;
+          text-align: left;
+        }
+      }
+      &_forgot {
+        color: $color-red;
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: none;
+      }
+    }
+  }
+  &_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    &_signup {
+      &_link {
+        text-decoration: none;
+        color: $color-red;
+      }
+    }
+    &_button {
+      background: #ff2020;
+      height: 60px;
+      padding: 10px 43px;
+      border: 0;
+      color: #fff;
+      text-transform: capitalize;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 0px;
+      font-family: "Jost", sans-serif;
+    }
+  }
+}
+
+.signup {
+  background: #fff;
+  padding: 55px 60px 50px 50px;
+  box-shadow: 0px 10px 30px 0px rgba(13, 12, 13, 0.2);
+  min-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: $color-white;
+    padding: 15px;
+  }
+
+  &_heading {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    &_title {
+      color: #140c40;
+      font-size: 30px;
+      font-weight: 600;
+    }
+    &_subtitle {
+      line-height: 1.5;
+    }
+  }
+  &_inputs {
+    padding-top: 35px;
+    padding-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 25px;
+    width: 100%;
+    &_input {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      width: 100%;
+      &_label {
+        font-size: 17px;
+        color: #140c40;
+        text-transform: capitalize;
+        font-weight: 500;
+        text-align: left;
+      }
+      &_input {
+        border: 1px solid #c9c9c9;
+        width: 100%;
+        height: 50px;
+        padding: 0 25px;
+        color: #000;
+        outline: none;
+        &::placeholder {
+          color: #c9c9c9;
+          font-family: "Jost", sans-serif;
+          font-size: 14px;
+        }
+      }
+    }
+    &_check {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      &_check {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        &_checkbox {
+          width: 20px;
+          height: 20px;
+          border: 1px solid #9e97ac !important;
+          outline: none;
+          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        &_label {
+          font-size: 17px;
+          color: #140c40;
+          font-weight: 500;
+          text-align: left;
+        }
+      }
+      &_forgot {
+        color: $color-red;
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: none;
+      }
+    }
+  }
+  &_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    &_login {
+      &_link {
+        text-decoration: none;
+        color: $color-red;
+      }
+    }
+    &_button {
+      background: #ff2020;
+      height: 60px;
+      padding: 10px 43px;
+      border: 0;
+      color: #fff;
+      text-transform: capitalize;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 0px;
+      font-family: "Jost", sans-serif;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .login {
+    padding: 40px 20px 20px 26px;
+    min-width: 95%;
+    &_footer {
+      flex-direction: column;
+      align-items: start;
+      gap: 28px;
+    }
+  }
+}
+
+@media (max-width: 578px) {
+  .login {
+    &_inputs {
+      &_check {
+        flex-direction: column;
+        gap: 13px;
+        align-items: start;
+      }
+    }
+  }
+}
