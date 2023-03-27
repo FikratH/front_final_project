@@ -29,7 +29,7 @@ loginButton.addEventListener("click", (e) => {
       users !== null &&
       users.some(
         (user) =>
-          user.email === loginInputsValue[0] &&
+          user.email.toLowerCase() === loginInputsValue[0].toLowerCase() &&
           user.password === loginInputsValue[1]
       )
     ) {
