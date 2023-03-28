@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap");
+
+$color-upheader-black: #292621;
+$color-upheader-border: #edeff2;
+$color-header: #141547;
+$color-white: #fff;
+$color-red: #ff2020;
+$color-crossed-price: #c7bd9c;
+$color-background-gray: #f6f6f6;
+$color-background-beige: #f3ead8;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body,
+html {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+  scroll-behavior: smooth;
+  background-color: #fff;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}

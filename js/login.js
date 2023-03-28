@@ -41,6 +41,13 @@ loginButton.addEventListener("click", (e) => {
       localStorage.setItem("currentUser", JSON.stringify(currentUser));
       window.location.href = "../index.html";
       alert("Logged in");
+    } else if (
+      users === null ||
+      users.some(
+        (user) => user.email.toLowerCase() !== loginInputsValue[0].toLowerCase()
+      )
+    ) {
+      alert("User not found");
     } else {
       alert("Incorrect email or password");
     }

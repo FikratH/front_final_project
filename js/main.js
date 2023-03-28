@@ -290,6 +290,9 @@ let users = [
     cart: [],
   },
 ];
+const cart_btn_header = document.querySelector(".header_cart_number");
+const btnToTop = document.querySelector(".button_top");
+const usernameField = document.querySelector(".username");
 let currentUser = "";
 let cart = [];
 let currentCategory;
@@ -299,10 +302,7 @@ const filterBtns = document.querySelectorAll(
 const slider_wrapper = document.querySelector(
   ".main_products_trending_boxes_wrapper_list"
 );
-const cart_btn_header = document.querySelector(".header_cart_number");
 const sliderItems = document.querySelector(".main_items_boxes_wrapper_list");
-const btnToTop = document.querySelector(".button_top");
-const usernameField = document.querySelector(".username");
 
 document.addEventListener("DOMContentLoaded", function () {
   if (localStorage.getItem("users")) {
@@ -552,6 +552,21 @@ function filterProducts(category) {
   }).mount();
 }
 
+btnToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    btnToTop.classList.add("active");
+  } else {
+    btnToTop.classList.remove("active");
+  }
+});
+
 slider_wrapper.addEventListener("click", (e) => {
   if (
     e.target.classList.contains("cart_btn") ||
@@ -584,20 +599,5 @@ sliderItems.addEventListener("click", (e) => {
       console.log(cart);
       cart_btn_header.innerHTML = cart.length;
     }
-  }
-});
-
-btnToTop.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-});
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 200) {
-    btnToTop.classList.add("active");
-  } else {
-    btnToTop.classList.remove("active");
   }
 });

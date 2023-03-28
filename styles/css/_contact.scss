@@ -1,0 +1,185 @@
+@import "./default";
+
+.container {
+  width: 100%;
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.main {
+  &_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &_heading {
+    display: flex;
+    justify-content: center;
+    background-color: $color-background-beige;
+    &_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    min-height: 150px;
+    gap: 12px;
+    &_title {
+      color: $color-upheader-black;
+      font-size: 35px;
+      font-weight: 500;
+    }
+    &_links {
+      display: flex;
+      align-items: center;
+
+      gap: 8px;
+      &_link {
+        color: #74706b;
+        font-size: 14px;
+      }
+      &_divider {
+        margin-top: -3px;
+        &::before {
+          display: inline-block;
+          color: #74706b;
+          content: "|";
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  &_body {
+    &_container {
+      padding: 50px 0 !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 72px;
+    }
+    &_map {
+      width: 100%;
+    }
+    &_contact {
+      padding: 0 12px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 20px;
+      &_title {
+        font-size: 27px;
+        font-weight: 600;
+      }
+      &_content {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 130px;
+        &_form {
+          flex: 1 1 66%;
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          &_textarea {
+            display: block;
+            width: 100% !important;
+            height: 50% !important;
+            padding: 5px 12px 6px 18px;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            appearance: none;
+            transition: border-color 0.15s ease-in-out,
+              box-shadow 0.15s ease-in-out;
+            outline: 0;
+            &::placeholder {
+              color: #8a8a8a;
+              font-family: "Jost", sans-serif;
+            }
+          }
+          &_group {
+            display: flex;
+            gap: 24px;
+            &_input {
+              border: 1px solid #e5e6e9;
+              border-radius: 0px;
+              height: 48px;
+              padding-left: 18px;
+              font-size: 13px;
+              background: transparent;
+              flex: 1 1 50%;
+              &::placeholder {
+                color: #8a8a8a;
+                font-family: "Jost", sans-serif;
+              }
+            }
+          }
+          &_input {
+            border: 1px solid #e5e6e9;
+            border-radius: 0px;
+            height: 48px;
+            padding-left: 18px;
+            font-size: 13px;
+            background: transparent;
+            &::placeholder {
+              color: #8a8a8a;
+              font-family: "Jost", sans-serif;
+            }
+          }
+          &_btn {
+            align-self: start;
+            text-align: center;
+            border: 1px solid $color-red;
+            background: #fff;
+            color: $color-red !important;
+            display: inline-block;
+            padding: 18px 44px;
+            font-family: "Jost", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+        &_info {
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+          flex: 1 1 33%;
+
+          &_item {
+            display: flex;
+            gap: 20px;
+            i {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #c8c8c8;
+              font-size: 28px;
+              max-width: 30px;
+              min-width: 30px;
+              margin-top: -10px;
+            }
+            &_desc {
+              display: flex;
+              flex-direction: column;
+              &_title {
+                color: #2a2a2a;
+                font-size: 16px;
+                line-height: 1.5;
+                font-weight: 500;
+              }
+              &_p {
+                color: #8a8a8a;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
