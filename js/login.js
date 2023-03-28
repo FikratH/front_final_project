@@ -38,6 +38,7 @@ loginButton.addEventListener("click", (e) => {
           user.email.toLowerCase() === loginInputsValue[0].toLowerCase() &&
           user.password === loginInputsValue[1]
       );
+      console.log(currentUser);
       localStorage.setItem("currentUser", JSON.stringify(currentUser));
       window.location.href = "../index.html";
       alert("Logged in");

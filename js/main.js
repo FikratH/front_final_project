@@ -156,7 +156,13 @@ document.addEventListener("DOMContentLoaded", function () {
   if (localStorage.getItem("users")) {
     users = JSON.parse(localStorage.getItem("users"));
   }
-  if (localStorage.getItem("currentUser")) {
+  if (
+    JSON.parse(localStorage.getItem("currentUser")) == null ||
+    localStorage.getItem("currentUser") == ""
+  ) {
+    currentUser = "";
+    localStorage.setItem("currentUser", JSON.stringify(currentUser));
+  } else {
     currentUser = JSON.parse(localStorage.getItem("currentUser"));
   }
   console.log("Current user =>", currentUser);
