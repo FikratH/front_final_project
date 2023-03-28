@@ -1,5 +1,6 @@
 let dataArr = [
   {
+    id: 1,
     img: "./assets/images/indexPage/trending1.jpg",
     category: "Men",
     title: "Cashmere Tank + Bag",
@@ -7,6 +8,7 @@ let dataArr = [
     oldPrice: "$120.00",
   },
   {
+    id: 2,
     img: "./assets/images/indexPage/trending2.jpg",
     title: "Cashmere Tank + Bag",
     category: "Women",
@@ -14,6 +16,7 @@ let dataArr = [
     oldPrice: "$120.00",
   },
   {
+    id: 3,
     img: "./assets/images/indexPage/trending3.jpg",
     title: "Cashmere Tank + Bag",
     category: "Baby",
@@ -21,6 +24,7 @@ let dataArr = [
     oldPrice: "$120.00",
   },
   {
+    id: 4,
     img: "./assets/images/indexPage/trending4.jpg",
     title: "Cashmere Tank + Bag",
     category: "Fashion",
@@ -28,6 +32,7 @@ let dataArr = [
     oldPrice: "$120.00",
   },
   {
+    id: 5,
     img: "./assets/images/indexPage/trending1.jpg",
     category: "Men",
     title: "Cashmere Tank + Bag",
@@ -35,6 +40,7 @@ let dataArr = [
     oldPrice: "$120.00",
   },
   {
+    id: 6,
     img: "./assets/images/indexPage/trending2.jpg",
     title: "Cashmere Tank + Bag",
     category: "Women",
@@ -42,6 +48,7 @@ let dataArr = [
     oldPrice: "$120.00",
   },
   {
+    id: 7,
     img: "./assets/images/indexPage/trending3.jpg",
     title: "Cashmere Tank + Bag",
     category: "Baby",
@@ -49,6 +56,7 @@ let dataArr = [
     oldPrice: "$120.00",
   },
   {
+    id: 8,
     img: "./assets/images/indexPage/trending4.jpg",
     title: "Cashmere Tank + Bag",
     category: "Fashion",
@@ -56,6 +64,7 @@ let dataArr = [
     oldPrice: "$120.00",
   },
   {
+    id: 9,
     img: "./assets/images/indexPage/trending1.jpg",
     category: "Men",
     title: "Cashmere Tank + Bag",
@@ -63,6 +72,7 @@ let dataArr = [
     oldPrice: "$120.00",
   },
   {
+    id: 10,
     img: "./assets/images/indexPage/trending2.jpg",
     title: "Cashmere Tank + Bag",
     category: "Women",
@@ -70,6 +80,7 @@ let dataArr = [
     oldPrice: "$120.00",
   },
   {
+    id: 11,
     img: "./assets/images/indexPage/trending3.jpg",
     title: "Cashmere Tank + Bag",
     category: "Baby",
@@ -77,6 +88,7 @@ let dataArr = [
     oldPrice: "$120.00",
   },
   {
+    id: 12,
     img: "./assets/images/indexPage/trending4.jpg",
     title: "Cashmere Tank + Bag",
     category: "Fashion",
@@ -84,6 +96,7 @@ let dataArr = [
     oldPrice: "$120.00",
   },
   {
+    id: 13,
     img: "./assets/images/indexPage/trending1.jpg",
     category: "Men",
     title: "Cashmere Tank + Bag",
@@ -91,6 +104,7 @@ let dataArr = [
     oldPrice: "$120.00",
   },
   {
+    id: 14,
     img: "./assets/images/indexPage/trending2.jpg",
     title: "Cashmere Tank + Bag",
     category: "Women",
@@ -98,6 +112,7 @@ let dataArr = [
     oldPrice: "$120.00",
   },
   {
+    id: 15,
     img: "./assets/images/indexPage/trending3.jpg",
     title: "Cashmere Tank + Bag",
     category: "Baby",
@@ -105,174 +120,7 @@ let dataArr = [
     oldPrice: "$120.00",
   },
   {
-    img: "./assets/images/indexPage/trending4.jpg",
-    title: "Cashmere Tank + Bag",
-    category: "Fashion",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending1.jpg",
-    category: "Men",
-    title: "Cashmere Tank + Bag",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending2.jpg",
-    title: "Cashmere Tank + Bag",
-    category: "Women",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending3.jpg",
-    title: "Cashmere Tank + Bag",
-    category: "Baby",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending4.jpg",
-    title: "Cashmere Tank + Bag",
-    category: "Fashion",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending1.jpg",
-    category: "Men",
-    title: "Cashmere Tank + Bag",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending2.jpg",
-    title: "Cashmere Tank + Bag",
-    category: "Women",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending3.jpg",
-    title: "Cashmere Tank + Bag",
-    category: "Baby",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending4.jpg",
-    title: "Cashmere Tank + Bag",
-    category: "Fashion",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending1.jpg",
-    category: "Men",
-    title: "Cashmere Tank + Bag",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending2.jpg",
-    title: "Cashmere Tank + Bag",
-    category: "Women",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending3.jpg",
-    title: "Cashmere Tank + Bag",
-    category: "Baby",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending4.jpg",
-    title: "Cashmere Tank + Bag",
-    category: "Fashion",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending1.jpg",
-    category: "Men",
-    title: "Cashmere Tank + Bag",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending2.jpg",
-    title: "Cashmere Tank + Bag",
-    category: "Women",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending3.jpg",
-    title: "Cashmere Tank + Bag",
-    category: "Baby",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending4.jpg",
-    title: "Cashmere Tank + Bag",
-    category: "Fashion",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending1.jpg",
-    category: "Men",
-    title: "Cashmere Tank + Bag",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending2.jpg",
-    title: "Cashmere Tank + Bag",
-    category: "Women",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending3.jpg",
-    title: "Cashmere Tank + Bag",
-    category: "Baby",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending4.jpg",
-    title: "Cashmere Tank + Bag",
-    category: "Fashion",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending1.jpg",
-    category: "Men",
-    title: "Cashmere Tank + Bag",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending2.jpg",
-    title: "Cashmere Tank + Bag",
-    category: "Women",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
-    img: "./assets/images/indexPage/trending3.jpg",
-    title: "Cashmere Tank + Bag",
-    category: "Baby",
-    price: "$98.00",
-    oldPrice: "$120.00",
-  },
-  {
+    id: 16,
     img: "./assets/images/indexPage/trending4.jpg",
     title: "Cashmere Tank + Bag",
     category: "Fashion",
@@ -294,7 +142,7 @@ const cart_btn_header = document.querySelector(".header_cart_number");
 const btnToTop = document.querySelector(".button_top");
 const usernameField = document.querySelector(".username");
 let currentUser = "";
-let cart = [];
+let cart;
 let currentCategory;
 const filterBtns = document.querySelectorAll(
   ".main_products_trending_title_categories_category"
@@ -311,7 +159,16 @@ document.addEventListener("DOMContentLoaded", function () {
   if (localStorage.getItem("currentUser")) {
     currentUser = JSON.parse(localStorage.getItem("currentUser"));
   }
-  console.log(currentUser);
+  console.log("Current user =>", currentUser);
+  if (currentUser != "") {
+    cart = currentUser.cart;
+    cart_btn_header.innerHTML = cart.length;
+    cart_btn_header.innerHTML = cart.length;
+    console.log("Current user's cart => ", cart);
+  } else {
+    cart = null;
+    cart_btn_header.innerHTML = 0;
+  }
   usernameField.innerHTML =
     currentUser.username == null
       ? "No Active User"
@@ -572,15 +429,19 @@ slider_wrapper.addEventListener("click", (e) => {
     e.target.classList.contains("cart_btn") ||
     e.target.parentElement.classList.contains("cart_btn")
   ) {
-    console.log("cart click");
     const id = e.target.closest("li").dataset.id;
     const product = dataArr[id];
     if (cart.includes(product)) {
       alert("This product is already in your cart");
     } else {
       cart.push(product);
-      console.log(cart);
+      currentUser.cart = cart;
+      users[currentUser.id - 1].cart = cart;
+      localStorage.setItem("users", JSON.stringify(users));
+      localStorage.setItem("currentUser", JSON.stringify(currentUser));
       cart_btn_header.innerHTML = cart.length;
+      console.log("Current user after click", currentUser);
+      console.log("All users after click", users);
     }
   }
 });
@@ -589,15 +450,23 @@ sliderItems.addEventListener("click", (e) => {
     e.target.classList.contains("cart_btn") ||
     e.target.parentElement.classList.contains("cart_btn")
   ) {
-    console.log("cart click");
     const id = e.target.closest("li").dataset.id;
     const product = dataArr[id];
-    if (cart.includes(product)) {
-      alert("This product is already in your cart");
+    if (cart != null) {
+      if (cart.includes(product)) {
+        alert("This product is already in your cart");
+      } else {
+        cart.push(product);
+        currentUser.cart = cart;
+        users[currentUser.id - 1].cart = cart;
+        localStorage.setItem("users", JSON.stringify(users));
+        localStorage.setItem("currentUser", JSON.stringify(currentUser));
+        cart_btn_header.innerHTML = cart.length;
+        console.log("Current user after click", currentUser);
+        console.log("All users after click", users);
+      }
     } else {
-      cart.push(product);
-      console.log(cart);
-      cart_btn_header.innerHTML = cart.length;
+      alert("Please login to add products to cart");
     }
   }
 });

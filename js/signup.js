@@ -60,6 +60,7 @@ signupButton.addEventListener("click", (e) => {
       username: signupInputsValue[0],
       email: signupInputsValue[1],
       password: signupInputsValue[2],
+      cart: [],
     });
     console.log(users);
     localStorage.setItem("users", JSON.stringify(users));

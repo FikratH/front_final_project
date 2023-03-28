@@ -43,7 +43,7 @@ loginButton.addEventListener("click", (e) => {
       alert("Logged in");
     } else if (
       users === null ||
-      users.some(
+      users.every(
         (user) => user.email.toLowerCase() !== loginInputsValue[0].toLowerCase()
       )
     ) {
