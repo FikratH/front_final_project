@@ -164,6 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
   } else {
     currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    console.log(currentUser);
   }
   console.log("Current user =>", currentUser);
   if (currentUser != "") {
