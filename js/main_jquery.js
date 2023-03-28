@@ -7,8 +7,9 @@ $(document).ready(function () {
     $(".header_search").slideUp(500);
   });
   $(".header_menu_list_item_submenu").hide();
-  $(".submenu").one("mouseenter mouseleave", function (e) {
-    $(this).children(".header_menu_list_item_submenu").slideToggle(200);
+
+  $(".submenu").hover(function (e) {
+    $(this).children(".header_menu_list_item_submenu").slideToggle(100);
   });
   $(".main_slider_left_btn").click(() => {
     $(".slider").children().first().fadeToggle();

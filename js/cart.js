@@ -5,7 +5,7 @@ let currentUser = JSON.parse(localStorage.getItem("currentUser"));
 let cart = [];
 let users = JSON.parse(localStorage.getItem("users"));
 let cartTableBody = document.querySelector(".cart_main_body_table_body");
-
+let subtotal = document.querySelector(".subtotal");
 console.log({
   cart_btn_header,
   btnToTop,
@@ -59,13 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
         item.category
       }</p>
         </td>
-        <td class="cart_main_body_table_body_row_td">${item.price}</td>
+        <td class="cart_main_body_table_body_row_td price">${item.price}</td>
         <td
           class="cart_main_body_table_body_row_td cart_main_body_table_header_row_quantity"
         >
           <div class="cart_main_body_table_body_row_td_quantity">
             <input
-              type="text"
+              type="number"
               class="cart_main_body_table_body_row_td_quantity_input"
               value="1"
             />
@@ -74,18 +74,18 @@ document.addEventListener("DOMContentLoaded", () => {
             >
         </button>
         <button
-          class="cart_main_body_table_body_row_td_quantity_buttons_btn"
+          class="cart_main_body_table_body_row_td_quantity_buttons_btn plus"
         >
           <i class="fa-solid fa-plus"></i>
         </button>
               <button
-                class="cart_main_body_table_body_row_td_quantity_buttons_btn"
+                class="cart_main_body_table_body_row_td_quantity_buttons_btn minus"
               >
                 <i class="fa-solid fa-minus"></i>
             </div>
           </div>
         </td>
-        <td class="cart_main_body_table_body_row_td">$${parseFloat(
+        <td class="cart_main_body_table_body_row_td item_total_price">$${parseFloat(
           item.price.replace("$", "") * 1
         )
           .toFixed(2)
@@ -94,6 +94,13 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     });
   }
+  console.log(subtotal);
+  let subtotalPrice = 0;
+
+  cart.forEach((item) => {
+    subtotalPrice += parseFloat(item.price.replace("$", ""));
+  });
+  subtotal.innerHTML = `$${subtotalPrice.toFixed(2).toString()}`;
 });
 
 btnToTop.addEventListener("click", () => {
@@ -107,5 +114,81 @@ window.addEventListener("scroll", () => {
     btnToTop.classList.add("active");
   } else {
     btnToTop.classList.remove("active");
+  }
+});
+
+cartTableBody.addEventListener("click", (e) => {
+  if (
+    e.target.classList.contains("plus") ||
+    e.target.classList.contains("fa-plus")
+  ) {
+    if (e.target.classList.contains("fa-plus")) {
+      e.target.parentElement.parentElement.parentElement.children[0].value++;
+      let parentTd =
+        e.target.parentElement.parentElement.parentElement.parentElement;
+      let priceTd = parentTd.previousElementSibling;
+      let totalTd = parentTd.nextElementSibling;
+      let priceTdValue = priceTd.innerHTML.replace("$", "");
+      let quantity =
+        e.target.parentElement.parentElement.parentElement.children[0].value;
+      let price = parseFloat(priceTdValue) * parseFloat(quantity);
+      totalTd.innerHTML = `$${price.toFixed(2).toString()}`;
+    } else {
+      e.target.parentElement.parentElement.children[0].value++;
+      let parentTd = e.target.parentElement.parentElement.parentElement;
+      let priceTd = parentTd.previousElementSibling;
+      let totalTd = parentTd.nextElementSibling;
+      let priceTdValue = priceTd.innerHTML.replace("$", "");
+      let quantity = e.target.parentElement.parentElement.children[0].value;
+      let price = parseFloat(priceTdValue) * parseFloat(quantity);
+      totalTd.innerHTML = `$${price.toFixed(2).toString()}`;
+      console.log(price);
+    }
+    let cartTotalPrices = document.querySelectorAll(".item_total_price");
+    subtotalPrice = 0;
+    cartTotalPrices.forEach((item) => {
+      subtotalPrice += parseFloat(item.innerHTML.replace("$", ""));
+    });
+    subtotal.innerHTML = `$${subtotalPrice.toFixed(2).toString()}`;
+  } else if (
+    e.target.classList.contains("minus") ||
+    e.target.classList.contains("fa-minus")
+  ) {
+    console.log(e.target);
+    if (e.target.classList.contains("fa-minus")) {
+      if (
+        e.target.parentElement.parentElement.parentElement.children[0].value > 1
+      ) {
+        e.target.parentElement.parentElement.parentElement.children[0].value--;
+        let parentTd =
+          e.target.parentElement.parentElement.parentElement.parentElement;
+        let priceTd = parentTd.previousElementSibling;
+        let totalTd = parentTd.nextElementSibling;
+        let priceTdValue = priceTd.innerHTML.replace("$", "");
+        let quantity =
+          e.target.parentElement.parentElement.parentElement.children[0].value;
+        let price = parseFloat(priceTdValue) * parseFloat(quantity);
+        totalTd.innerHTML = `$${price.toFixed(2).toString()}`;
+        console.log(price);
+      }
+    } else {
+      if (e.target.parentElement.parentElement.children[0].value > 1) {
+        e.target.parentElement.parentElement.children[0].value--;
+        let parentTd = e.target.parentElement.parentElement.parentElement;
+        let priceTd = parentTd.previousElementSibling;
+        let totalTd = parentTd.nextElementSibling;
+        let priceTdValue = priceTd.innerHTML.replace("$", "");
+        let quantity = e.target.parentElement.parentElement.children[0].value;
+        let price = parseFloat(priceTdValue) * parseFloat(quantity);
+        totalTd.innerHTML = `$${price.toFixed(2).toString()}`;
+        console.log(price);
+      }
+    }
+    let cartTotalPrices = document.querySelectorAll(".item_total_price");
+    subtotalPrice = 0;
+    cartTotalPrices.forEach((item) => {
+      subtotalPrice += parseFloat(item.innerHTML.replace("$", ""));
+    });
+    subtotal.innerHTML = `$${subtotalPrice.toFixed(2).toString()}`;
   }
 });
